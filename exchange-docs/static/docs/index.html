@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Welcome to Boundless Exchange Documentation! &mdash; Boundless Exchange 1.3.0 documentation</title>
+  <title>Welcome to Boundless Exchange Documentation! &mdash; Boundless Exchange 1.3.0 documentation RICH TEST</title>
   
 
   
@@ -274,9 +274,14 @@
 
   <div role="contentinfo">
     <div class="info">
-      <a class="logo-link" href="http://boundlessgeo.com">
+      {% if not ON_AIRGAPPED_NETWORK %}
+        <a class="logo-link" href="http://boundlessgeo.com">
+      
+
         <div class="boundless-logo"></div>
+      
       </a>
+      { % endif %}
       <div class="copyright">
       
         Copyright &copy; 2016, Boundless
@@ -284,9 +289,10 @@
       </div>
     </div>
     <div class="footer-aside">
+          {% if not ON_AIR_GAPPED_NETWORK %}
         
           <a id="zenbox" class="help-contact" data="index" href="https://connect.boundlessgeo.com/Community/Questions-Answers">Ask a Question</a>
-        
+          {% endif %}
       </div>
   </div>
 </footer>
